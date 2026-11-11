@@ -215,8 +215,9 @@ body {
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   font-weight: 600;
+  padding: 10px 6px;
   transition: color var(--transition-fast);
 }
 
@@ -233,15 +234,16 @@ body {
 .ig-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.84rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  padding: 7px 13px;
+  padding: 10px 16px;
+  min-height: 44px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
-  border-radius: 20px;
+  border-radius: 24px;
   transition: all var(--transition-fast);
 }
 
@@ -349,15 +351,18 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-body);
   font-weight: 700;
+  font-size: 1.02rem;
+  padding: 16px 28px;
+  min-height: 54px;
   text-decoration: none;
-  border-radius: 12px;
+  border-radius: 14px;
   cursor: pointer;
   transition: all var(--transition-smooth);
   border: none;
-  line-height: 1.2;
+  line-height: 1.25;
   text-align: center;
 }
 
@@ -373,10 +378,10 @@ body {
 }
 
 .btn-outline {
-  background: rgba(13, 13, 16, 0.65);
+  background: rgba(13, 13, 16, 0.72);
   backdrop-filter: blur(8px);
   color: var(--text-main);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1.5px solid rgba(255, 255, 255, 0.24);
 }
 
 .btn-outline:hover {
@@ -386,18 +391,22 @@ body {
 }
 
 .btn-sm {
-  padding: 9px 16px;
-  font-size: 0.84rem;
+  padding: 12px 22px;
+  min-height: 44px;
+  font-size: 0.92rem;
+  border-radius: 12px;
 }
 
 .btn-lg {
-  padding: 15px 28px;
-  font-size: 1rem;
+  padding: 18px 34px;
+  min-height: 62px;
+  font-size: 1.12rem;
   flex-direction: column;
+  gap: 4px;
 }
 
 .btn-lg span.btn-subtext {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 600;
   opacity: 0.85;
 }
@@ -497,12 +506,12 @@ body {
 
 .hero-cta-group {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .hero-cta-group .btn-lg {
-  min-width: 190px;
+  min-width: 225px;
 }
 
 /* ==========================================================================
@@ -1020,10 +1029,11 @@ body {
   width: 100%;
   background: #101115;
   border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  padding: 13px 15px;
+  border-radius: 12px;
+  padding: 15px 18px;
+  min-height: 54px;
   font-family: var(--font-body);
-  font-size: 0.92rem;
+  font-size: 0.98rem;
   color: var(--text-main);
   transition: border-color var(--transition-fast);
 }
@@ -1037,7 +1047,7 @@ body {
 
 .form-textarea {
   resize: vertical;
-  min-height: 90px;
+  min-height: 100px;
 }
 
 .field-error {
@@ -1050,7 +1060,7 @@ body {
 .goal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 12px;
   margin-top: 4px;
 }
 
@@ -1062,10 +1072,10 @@ body {
 .goal-tile input[type="radio"] {
   position: absolute;
   top: 50%;
-  right: 12px;
+  right: 16px;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   accent-color: var(--accent-gold);
 }
 
@@ -1074,8 +1084,9 @@ body {
   align-items: center;
   background: #101115;
   border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  padding: 12px 34px 12px 14px;
+  border-radius: 12px;
+  padding: 16px 40px 16px 18px;
+  min-height: 56px;
   transition: all var(--transition-fast);
 }
 
@@ -1086,14 +1097,14 @@ body {
 
 .tile-title {
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: var(--text-main);
 }
 
 #submitBtn {
-  min-height: 52px;
-  font-size: 1rem;
-  margin-top: 4px;
+  min-height: 62px;
+  font-size: 1.1rem;
+  margin-top: 6px;
 }
 
 .spinner {
@@ -1245,11 +1256,12 @@ body {
 .footer-social-card {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 12px 16px;
+  border-radius: 14px;
+  padding: 16px 20px;
+  min-height: 58px;
   text-decoration: none;
   color: var(--text-main);
   transition: border-color var(--transition-fast);
@@ -1324,8 +1336,9 @@ body {
   color: #0b0c0e;
   text-decoration: none;
   font-weight: 800;
-  font-size: 0.95rem;
-  padding: 13px 20px;
+  font-size: 1.05rem;
+  padding: 16px 24px;
+  min-height: 56px;
   border-radius: 50px;
   box-shadow: 0 10px 25px rgba(229, 169, 60, 0.4);
 }
