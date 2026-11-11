@@ -57,6 +57,7 @@
       <nav class="desktop-nav" aria-label="Hlavní navigace">
         <ul class="nav-links">
           <li><a href="#o-mne" class="nav-link">O mně</a></li>
+          <li><a href="#galerie" class="nav-link">Pódium</a></li>
           <li><a href="#sluzby" class="nav-link">Služby</a></li>
           <li><a href="#milniky" class="nav-link">Úspěchy</a></li>
           <li><a href="#filosofie" class="nav-link">Proč se mnou</a></li>
@@ -84,9 +85,10 @@
     <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
       <ul class="mobile-nav-links">
         <li><a href="#hero" class="mobile-nav-link">Domů</a></li>
-        <li><a href="#milniky" class="mobile-nav-link">Úspěchy & NPC</a></li>
         <li><a href="#o-mne" class="mobile-nav-link">O Danovi</a></li>
+        <li><a href="#galerie" class="mobile-nav-link">Závodní pódium</a></li>
         <li><a href="#sluzby" class="mobile-nav-link">Služby & Coaching</a></li>
+        <li><a href="#milniky" class="mobile-nav-link">Úspěchy & NPC</a></li>
         <li><a href="#filosofie" class="mobile-nav-link">Proč se mnou</a></li>
         <li><a href="#kontakt" class="mobile-nav-link">Nezávazná poptávka</a></li>
       </ul>
@@ -154,67 +156,24 @@
             <div class="athlete-card-glow" aria-hidden="true"></div>
             
             <div class="athlete-stage-mockup">
-              <!-- Stage Backdrop Decoration -->
-              <div class="stage-lighting" aria-hidden="true"></div>
-              
-              <!-- Athlete Medal Trophy Icon & Visual Identity -->
-              <div class="stage-frame">
-                <div class="stage-emblem" aria-hidden="true">
-                  <svg viewBox="0 0 100 100" class="medal-svg" fill="none">
-                    <circle cx="50" cy="50" r="46" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.6"/>
-                    <circle cx="50" cy="50" r="38" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4 2"/>
-                    <path d="M50 14 L55 28 L70 28 L58 37 L62 51 L50 42 L38 51 L42 37 L30 28 L45 28 Z" fill="url(#goldGrad)" opacity="0.95"/>
-                    <path d="M35 58 L50 67 L65 58 L50 82 Z" fill="url(#goldGrad)" opacity="0.8"/>
-                    <defs>
-                      <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#fde68a" />
-                        <stop offset="50%" stop-color="#e5a93c" />
-                        <stop offset="100%" stop-color="#b45309" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-
-                <div class="athlete-photo-container">
-                  <div class="athlete-silhouette" aria-hidden="true">
-                    <svg viewBox="0 0 200 240" fill="currentColor">
-                      <path d="M100 25 C112 25 120 35 120 48 C120 60 112 68 100 68 C88 68 80 60 80 48 C80 35 88 25 100 25 Z"/>
-                      <path d="M60 85 C75 75 90 73 100 73 C110 73 125 75 140 85 C160 98 175 120 170 145 C167 158 152 165 142 155 C138 151 135 140 134 130 C130 155 120 185 118 215 C115 235 110 240 100 240 C90 240 85 235 82 215 C80 185 70 155 66 130 C65 140 62 151 58 155 C48 165 33 158 30 145 C25 120 40 98 60 85 Z"/>
-                    </svg>
-                  </div>
-                  <div class="athlete-badge-overlay">
-                    <span class="gold-trophy-icon">🏆</span>
-                    <span class="badge-text-primary">Dan Žalud na pódiu</span>
-                    <span class="badge-text-secondary">MČR & ME Španělsko • NPC Medailista</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Live Card Floating Badges -->
-              <div class="floating-stat stat-top">
-                <span class="stat-star">★</span>
-                <div>
-                  <strong>NPC Bodybuilder</strong>
-                  <p>Aktivní závodník na pódiu</p>
-                </div>
-              </div>
-
-              <div class="floating-stat stat-bottom">
-                <span class="stat-flag">🇪🇸 🇨🇿</span>
-                <div>
-                  <strong>Závodní zkušenosti</strong>
-                  <p>Extrémní prep & reálné výsledky</p>
-                </div>
+              <!-- Real photo of Dan on stage, clean and unobstructed -->
+              <div class="athlete-img-wrapper">
+                <img 
+                  src="images/dan-trophy.jpg" 
+                  alt="Dan Žalud – vítěz a závodník NPC na pódiu s trofejí a medailí" 
+                  class="athlete-real-photo"
+                  loading="eager"
+                >
               </div>
             </div>
 
-            <!-- Card Bottom Bar -->
+            <!-- Card Bottom Bar (clean, underneath photo, not covering it) -->
             <div class="athlete-card-footer">
               <div class="footer-profile">
                 <div class="profile-avatar-circle">DŽ</div>
                 <div>
                   <div class="profile-name">Dan Žalud</div>
-                  <div class="profile-handle"><a href="https://instagram.com/dan_zalud" target="_blank" rel="noopener noreferrer">@dan_zalud</a></div>
+                  <div class="profile-handle"><a href="https://instagram.com/dan_zalud" target="_blank" rel="noopener noreferrer">@dan_zalud</a> • NPC Competitor</div>
                 </div>
               </div>
               <a href="#kontakt" class="card-action-link">Spolupracovat &rarr;</a>
@@ -274,16 +233,18 @@
       <div class="container about-grid">
         <div class="about-media">
           <div class="story-card">
-            <div class="story-image-placeholder">
-              <div class="story-quote-badge">
-                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true" class="quote-svg">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                </svg>
-                <p class="story-quote-text">
-                  „Když jdeš na stage, nemůžeš nic předstírat. Každý gram tuku i svalu je výsledkem precizního systému.“
-                </p>
-                <span class="story-quote-author">— Dan Žalud</span>
-              </div>
+            <div class="story-photo-wrapper">
+              <img 
+                src="images/dan-medal.jpg" 
+                alt="Dan Žalud – závodník a medailista NPC s medailí z EVLS Prague" 
+                class="story-real-photo"
+                loading="lazy"
+              >
+            </div>
+            
+            <div class="story-photo-caption">
+              <span class="caption-tag">EVLS PRAGUE & NPC WORLDWIDE</span>
+              <p>Reálná forma otestovaná v nejtěžších soutěžních podmínkách na pódiu.</p>
             </div>
 
             <div class="story-milestones-box">
@@ -354,6 +315,81 @@
               Můj profil na Instagramu &rarr;
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZÁVODNÍ FORMA & PÓDIUM (STAGE GALLERY) -->
+    <section class="gallery-section" id="galerie">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="section-tag">ZÁVODNÍ FORMA & PÓDIUM</div>
+          <h2 class="section-title">Úspěchy a forma ze <span class="text-gold">soutěží NPC</span></h2>
+          <p class="section-lead">Výsledky neokecáš. Reálná forma otestovaná pod přísným okem mezinárodních rozhodčích.</p>
+        </div>
+
+        <div class="stage-gallery-grid">
+          
+          <div class="stage-gallery-item">
+            <div class="gallery-img-box">
+              <img 
+                src="images/dan-trophy.jpg" 
+                alt="Dan Žalud – Weider Olympia Qualifier a zisk zlaté trofeje s medailí" 
+                loading="lazy"
+              >
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-tag">1. MÍSTO & TROFEJ</span>
+              <h3 class="gallery-item-title">Weider Olympia Qualifier</h3>
+              <p class="gallery-item-desc">Vítězství a zisk trofeje s medailí na prestižní mezinárodní kvalifikaci.</p>
+            </div>
+          </div>
+
+          <div class="stage-gallery-item">
+            <div class="gallery-img-box">
+              <img 
+                src="images/dan-medal.jpg" 
+                alt="Dan Žalud na EVLS Prague Amateur s medailí na krku" 
+                loading="lazy"
+              >
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-tag">MEDAILOVÝ ÚSPĚCH</span>
+              <h3 class="gallery-item-title">EVLS Prague Amateur</h3>
+              <p class="gallery-item-desc">Most Muscular póza a medaile před domácím publikem v Praze.</p>
+            </div>
+          </div>
+
+          <div class="stage-gallery-item">
+            <div class="gallery-img-box">
+              <img 
+                src="images/dan-sidechest.jpg" 
+                alt="Dan Žalud – boční póza hrudník a triceps na pódiu" 
+                loading="lazy"
+              >
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-tag">STAGE PÓZING</span>
+              <h3 class="gallery-item-title">Boční hrudník & Symetrie</h3>
+              <p class="gallery-item-desc">Extrémní vyrýsování, svalová tvrdost a technicky zvládnutá prezentace.</p>
+            </div>
+          </div>
+
+          <div class="stage-gallery-item">
+            <div class="gallery-img-box">
+              <img 
+                src="images/dan-stage.jpg" 
+                alt="Dan Žalud – soutěžní forma a prezentace na pódiu" 
+                loading="lazy"
+              >
+            </div>
+            <div class="gallery-item-info">
+              <span class="gallery-tag">PEAK WEEK</span>
+              <h3 class="gallery-item-title">Finální forma & Ladění</h3>
+              <p class="gallery-item-desc">Důkaz precizní manipulace s vodou, sodíkem a sacharidy v peak weeku.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -747,12 +783,12 @@
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-heading">Sociální sítě & Kód</h4>
+        <h4 class="footer-heading">Sociální sítě & Kontakt</h4>
         <div class="footer-social-stack">
           <!-- Instagram Direct Link -->
           <a href="https://instagram.com/dan_zalud" target="_blank" rel="noopener noreferrer" class="footer-social-card">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
             </svg>
             <div>
               <span class="social-title">Instagram</span>
@@ -760,14 +796,14 @@
             </div>
           </a>
 
-          <!-- GitHub Repo Link -->
-          <a href="https://github.com/LUKASF-PLYSAKK/trener-dan-zalud" target="_blank" rel="noopener noreferrer" class="footer-social-card">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          <!-- Direct DM Link -->
+          <a href="https://ig.me/m/dan_zalud" target="_blank" rel="noopener noreferrer" class="footer-social-card">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
             </svg>
             <div>
-              <span class="social-title">GitHub Repo</span>
-              <span class="social-handle">LUKASF-PLYSAKK / Dan Žalud</span>
+              <span class="social-title">Přímá zpráva (DM)</span>
+              <span class="social-handle">Napiš mi kdykoliv dotaz</span>
             </div>
           </a>
         </div>
@@ -778,7 +814,7 @@
     <div class="footer-bottom">
       <div class="container footer-bottom-content">
         <p>&copy; 2026 Dan Žalud. Všechna práva vyhrazena. NPC Bodybuilder & Coach.</p>
-        <p class="footer-credit">Designed with passion for modern fitness & athletic excellence.</p>
+        <p class="footer-credit">Web vytvořil <a href="https://lukasfilip.cz" target="_blank" rel="noopener noreferrer" class="creator-link">Lukáš Filip</a></p>
       </div>
     </div>
   </footer>
