@@ -422,21 +422,25 @@ body {
 
 .hero-bg-media {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 58%;
+  inset: 0;
+  width: 100%;
   z-index: 1;
   pointer-events: none;
+}
+
+.hero-bg-media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-dan-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: 78% 18%;
   display: block;
-  filter: brightness(0.75) contrast(1.04);
+  filter: brightness(0.8) contrast(1.04);
 }
 
 .hero-photo-gradient {
@@ -444,8 +448,8 @@ body {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, #0d0d10 0%, rgba(13, 13, 16, 0.96) 20%, rgba(13, 13, 16, 0.78) 42%, rgba(13, 13, 16, 0.36) 70%, rgba(13, 13, 16, 0.28) 100%),
-    linear-gradient(180deg, rgba(13, 13, 16, 0.45) 0%, transparent 22%, transparent 76%, #0d0d10 100%);
+    linear-gradient(90deg, #0d0d10 0%, rgba(13, 13, 16, 0.96) 28%, rgba(13, 13, 16, 0.8) 46%, rgba(13, 13, 16, 0.32) 66%, rgba(13, 13, 16, 0.22) 100%),
+    linear-gradient(180deg, rgba(13, 13, 16, 0.42) 0%, transparent 18%, transparent 78%, #0d0d10 100%);
 }
 
 .hero-container {
@@ -707,19 +711,11 @@ body {
   transform: translateY(-3px);
 }
 
-.pillar-number {
-  font-family: var(--font-display);
-  font-size: 1.65rem;
-  font-weight: 800;
-  color: var(--accent-yellow);
-  line-height: 1;
-}
-
 .pillar-title {
   font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text-main);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-yellow);
   line-height: 1.3;
 }
 
@@ -1038,13 +1034,12 @@ body {
   transition: transform var(--transition-smooth);
 }
 
-/* 1. Online coaching: grayscale */
-.coop-img-grayscale {
-  filter: grayscale(100%) contrast(1.08);
+/* 1. Online coaching: barevná fotka */
+.coop-img-online {
   object-position: center 22%;
 }
 
-.coop-card:hover .coop-img-grayscale {
+.coop-card:hover .coop-img-online {
   transform: scale(1.04);
 }
 
@@ -1690,15 +1685,17 @@ dialog.legal-dialog::backdrop {
 
   .hero-bg-media {
     position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
+    inset: auto;
     width: 100%;
-    height: 430px;
+    height: 460px;
+  }
+
+  .hero-dan-photo {
+    object-position: center 16%;
   }
 
   .hero-photo-gradient {
-    background: linear-gradient(180deg, rgba(13, 13, 16, 0.25) 0%, rgba(13, 13, 16, 0.18) 38%, rgba(13, 13, 16, 0.72) 76%, #0d0d10 100%);
+    background: linear-gradient(180deg, rgba(13, 13, 16, 0.24) 0%, rgba(13, 13, 16, 0.16) 40%, rgba(13, 13, 16, 0.74) 78%, #0d0d10 100%);
   }
 
   .hero-container {

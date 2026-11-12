@@ -83,12 +83,15 @@
     <!-- A. ÚVODNÍ HERO SEKCE (Vpravo zatmavená fotka přecházející do pozadí textu vlevo | Na mobilu přes celou šířku) -->
     <section class="hero-section" id="hero">
       <div class="hero-bg-media">
-        <img
-          src="images/hero-dan.jpg"
-          alt="Dan Žalud – osobní a online fitness trenér"
-          class="hero-dan-photo"
-          fetchpriority="high"
-        >
+        <picture>
+          <source media="(max-width: 900px)" srcset="images/hero-dan.jpg">
+          <img
+            src="images/hero-dan-wide.jpg"
+            alt="Dan Žalud – osobní a online fitness trenér"
+            class="hero-dan-photo"
+            fetchpriority="high"
+          >
+        </picture>
         <div class="hero-photo-gradient" aria-hidden="true"></div>
       </div>
 
@@ -190,7 +193,6 @@
         <!-- 3 navazující bloky / karty -->
         <div class="pillars-grid">
           <article class="pillar-card">
-            <div class="pillar-number">01</div>
             <h3 class="pillar-title">MOJE CESTA A VÝSLEDKY</h3>
             <p class="pillar-text">
               Kulturistice se aktivně věnuji již 9 let a sám pravidelně závodím. Díky vlastním zkušenostem dobře vím, co obnáší disciplína, důslednost a dlouhodobé odhodlání, které jsou nezbytné pro dosažení skutečných výsledků. Zkušenosti, které jsem získal během let tréninku a závodních příprav, dnes předávám také svým klientům. Nezakládám své vedení pouze na teorii, ale také na vlastní praxi a zkušenostech z kulturistického prostředí. Vím, co obnáší cesta za výsledky. A rád ti pomohu najít tu tvou.
@@ -198,7 +200,6 @@
           </article>
 
           <article class="pillar-card">
-            <div class="pillar-number">02</div>
             <h3 class="pillar-title">9 LET ZKUŠENOSTÍ S VÝŽIVOU</h3>
             <p class="pillar-text">
               Výživě se věnuji již 9 let. Díky dlouhodobé praxi a vlastnímu testování dobře vím, jak strava ovlivňuje fungování těla, výkon i regeneraci. Každý člověk je jiný, proto ke každému jídelníčku přistupuji individuálně podle jeho potřeb a cílů.
@@ -206,7 +207,6 @@
           </article>
 
           <article class="pillar-card">
-            <div class="pillar-number">03</div>
             <h3 class="pillar-title">VÍCE NEŽ 30 KLIENTSKÝCH PROMĚN</h3>
             <p class="pillar-text">
               Pomohl jsem více než 30 klientům změnit postavu, zlepšit mobilitu, zmírnit pohybové obtíže nebo se připravit na závody. Každou spolupráci stavím na individuálním přístupu a cílech konkrétního klienta.
@@ -383,13 +383,13 @@
         </div>
 
         <div class="coop-grid">
-          <!-- 1. Online coaching (černobílá online-coaching) -->
+          <!-- 1. Online coaching (barevná online-coaching) -->
           <div class="coop-card">
             <div class="coop-media">
               <img
                 src="images/online-coaching.jpg"
                 alt="Dan Žalud připravuje plán pro online coaching"
-                class="coop-img coop-img-grayscale"
+                class="coop-img coop-img-online"
                 loading="lazy"
               >
             </div>
