@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const formCard = document.querySelector('.contact-card');
           if (formCard) {
             formCard.style.transition = 'box-shadow 0.4s ease, border-color 0.4s ease';
-            formCard.style.borderColor = '#fbbf24';
-            formCard.style.boxShadow = '0 0 35px rgba(229, 169, 60, 0.4)';
+            formCard.style.borderColor = '#facc15';
+            formCard.style.boxShadow = '0 0 35px rgba(250, 204, 21, 0.35)';
             setTimeout(() => {
               formCard.style.borderColor = '';
               formCard.style.boxShadow = '';
@@ -133,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
         hasError = true;
       }
 
-      // Validate Contact (Instagram or Phone)
+      // Validate Contact (Phone, Email or Instagram)
       if (!contactVal || contactVal.length < 3) {
-        if (contactError) contactError.textContent = 'Prosím vyplň Instagram (@tvuj_ucet) nebo telefonní číslo.';
+        if (contactError) contactError.textContent = 'Prosím vyplň telefon, e-mail nebo Instagram.';
         if (contactInfoInput) contactInfoInput.style.borderColor = '#f87171';
         hasError = true;
       }
@@ -201,6 +201,36 @@ document.addEventListener('DOMContentLoaded', () => {
       coachingForm.style.display = 'flex';
       if (fullNameInput) fullNameInput.focus();
     });
+  }
+
+  // --- 5. Legal Modals (<dialog> with light-dismiss fallback) ---
+  const modalTriggers = document.querySelectorAll('[data-open-modal]');
+  modalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const targetId = trigger.getAttribute('data-open-modal');
+      const dialog = targetId ? document.getElementById(targetId) : null;
+      if (dialog && typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      }
+    });
+  });
+
+  if (!('closedBy' in HTMLDialogElement.prototype)) {
+    const isOutside = (e, dialog) => {
+      const r = dialog.getBoundingClientRect();
+      return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    };
+    for (const dialog of document.querySelectorAll('dialog[closedby="any"]')) {
+      let pressedOutside = false;
+      dialog.addEventListener('pointerdown', (e) => {
+        pressedOutside = isOutside(e, dialog);
+      });
+      dialog.addEventListener('pointerup', (e) => {
+        if (pressedOutside && isOutside(e, dialog)) {
+          dialog.close();
+        }
+      });
+    }
   }
 
   // Security helper to escape HTML in confirmation text
