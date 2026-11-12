@@ -1023,7 +1023,7 @@ body {
 
 .coop-media {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 6 / 5;
   overflow: hidden;
   background: #101115;
   position: relative;
@@ -1037,24 +1037,22 @@ body {
   transition: transform var(--transition-smooth);
 }
 
-/* 1. Online coaching: barevná fotka */
+/* 1. Online coaching: barevná fotka s viditelným notebookem i obličejem */
 .coop-img-online {
-  object-position: center 22%;
+  object-position: center 49%;
 }
 
 .coop-card:hover .coop-img-online {
   transform: scale(1.04);
 }
 
-/* 2. Osobní coaching: CSS crop & zoom focused directly on Dan's face (eliminating black bars) */
-.coop-img-face-zoom {
-  object-position: 30% 35%;
-  transform: scale(1.75);
-  transform-origin: 29% 35%;
+/* 2. Osobní coaching: stahování kladky bez přehnaného přiblížení a bez černých okrajů */
+.coop-img-pulldown {
+  object-position: center 39%;
 }
 
-.coop-card:hover .coop-img-face-zoom {
-  transform: scale(1.83);
+.coop-card:hover .coop-img-pulldown {
+  transform: scale(1.04);
 }
 
 /* 3. Kompletní spolupráce */
