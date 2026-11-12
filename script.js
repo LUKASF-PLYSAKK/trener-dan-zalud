@@ -144,7 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Collect form values
       const formData = new FormData(coachingForm);
-      const selectedGoal = formData.get('goal') || 'Fitness cíl';
+      const rawGoal = formData.get('goal') || 'Fitness cíl';
+      const customGoalText = (formData.get('customGoal') || '').toString().trim();
+      const selectedGoal = (rawGoal === 'Něco jiného' && customGoalText)
+        ? `Něco jiného: ${customGoalText}`
+        : rawGoal;
       const selectedService = formData.get('service') || 'Online Coaching';
       const userMessage = formData.get('message') || '';
 
@@ -192,11 +196,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Toggle optional custom goal field when "Něco jiného" is selected
+  const customGoalGroup = document.getElementById('customGoalGroup');
+  const customGoalInput = document.getElementById('customGoalInput');
+  const goalRadios = document.querySelectorAll('input[name="goal"]');
+
+  function syncCustomGoalVisibility() {
+    if (!customGoalGroup) return;
+    const checked = document.querySelector('input[name="goal"]:checked');
+    const isOther = Boolean(checked && checked.value === 'Něco jiného');
+    customGoalGroup.hidden = !isOther;
+    if (isOther && customGoalInput) {
+      customGoalInput.focus();
+    }
+  }
+
+  goalRadios.forEach(radio => {
+    radio.addEventListener('change', syncCustomGoalVisibility);
+  });
+
   // Reset form handler
   if (resetFormBtn && coachingForm && formSuccessMessage) {
     resetFormBtn.addEventListener('click', () => {
       coachingForm.reset();
       clearErrors();
+      if (customGoalGroup) customGoalGroup.hidden = true;
       formSuccessMessage.style.display = 'none';
       coachingForm.style.display = 'flex';
       if (fullNameInput) fullNameInput.focus();
