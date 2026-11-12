@@ -84,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const formCard = document.querySelector('.contact-card');
           if (formCard) {
             formCard.style.transition = 'box-shadow 0.4s ease, border-color 0.4s ease';
-            formCard.style.borderColor = '#facc15';
-            formCard.style.boxShadow = '0 0 35px rgba(250, 204, 21, 0.35)';
+            formCard.style.borderColor = '#fbbf24';
+            formCard.style.boxShadow = '0 0 35px rgba(229, 169, 60, 0.4)';
             setTimeout(() => {
               formCard.style.borderColor = '';
               formCard.style.boxShadow = '';

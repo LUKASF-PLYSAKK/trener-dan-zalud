@@ -11,15 +11,19 @@
   <meta property="og:description" content="Tvá cesta. Tvůj progres. Naše práce. Pomáhám lidem k lepšímu životnímu stylu.">
   <meta property="og:type" content="website">
 
-  <!-- Clean Sans-Serif Typography: Inter -->
+  <!-- Modern Athletic Sans-Serif Typography: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Ambient Golden Glow Background -->
+  <div class="ambient-glow ambient-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-center-right" aria-hidden="true"></div>
 
   <!-- Navigation Header -->
   <header class="site-header" id="header">
@@ -76,15 +80,10 @@
   </header>
 
   <main>
-    <!-- A. ÚVODNÍ HERO SEKCE -->
-    <section class="hero-banner" id="hero">
-      <div class="hero-bg-media" aria-hidden="true">
-        <img src="images/hero-dan.jpg" alt="" class="hero-bg-img" fetchpriority="high">
-        <div class="hero-bg-overlay"></div>
-      </div>
-
-      <div class="container hero-banner-content">
-        <div class="hero-text-box">
+    <!-- A. ÚVODNÍ HERO SEKCE (Vlevo text, vpravo fotka | Na mobilu fotka přes celou šířku) -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-split">
+        <div class="hero-text-col">
           <p class="hero-slogan">Tvůj cíl. Můj plán. Společný výsledek.</p>
 
           <h1 class="hero-title">
@@ -103,21 +102,33 @@
               <span>Zobrazit nabídku</span>
             </a>
           </div>
+
+          <!-- Statistiky / Čísla -->
+          <div class="hero-stats-grid" aria-label="Hlavní zkušenosti a výsledky">
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">9 let</span>
+              <span class="hero-stat-label">aktivního závodění v kulturistice</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">2+ roky</span>
+              <span class="hero-stat-label">zkušeností</span>
+            </div>
+            <div class="hero-stat-item">
+              <span class="hero-stat-value">30+</span>
+              <span class="hero-stat-label">spokojených klientů</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Statistiky / Čísla -->
-        <div class="hero-stats-grid" aria-label="Hlavní zkušenosti a výsledky">
-          <div class="hero-stat-item">
-            <span class="hero-stat-value">9 let</span>
-            <span class="hero-stat-label">aktivního závodění v kulturistice</span>
-          </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-value">2+ roky</span>
-            <span class="hero-stat-label">zkušeností</span>
-          </div>
-          <div class="hero-stat-item">
-            <span class="hero-stat-value">30+</span>
-            <span class="hero-stat-label">spokojených klientů</span>
+        <div class="hero-media-col">
+          <div class="hero-photo-frame">
+            <img
+              src="images/hero-dan.jpg"
+              alt="Dan Žalud – osobní a online fitness trenér"
+              class="hero-dan-photo"
+              fetchpriority="high"
+            >
+            <div class="hero-photo-gradient" aria-hidden="true"></div>
           </div>
         </div>
       </div>
