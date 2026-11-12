@@ -80,9 +80,19 @@
   </header>
 
   <main>
-    <!-- A. ÚVODNÍ HERO SEKCE (Vlevo text, vpravo fotka | Na mobilu fotka přes celou šířku) -->
+    <!-- A. ÚVODNÍ HERO SEKCE (Vpravo zatmavená fotka přecházející do pozadí textu vlevo | Na mobilu přes celou šířku) -->
     <section class="hero-section" id="hero">
-      <div class="container hero-split">
+      <div class="hero-bg-media">
+        <img
+          src="images/hero-dan.jpg"
+          alt="Dan Žalud – osobní a online fitness trenér"
+          class="hero-dan-photo"
+          fetchpriority="high"
+        >
+        <div class="hero-photo-gradient" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero-container">
         <div class="hero-text-col">
           <p class="hero-slogan">Tvůj cíl. Můj plán. Společný výsledek.</p>
 
@@ -119,48 +129,40 @@
             </div>
           </div>
         </div>
-
-        <div class="hero-media-col">
-          <div class="hero-photo-frame">
-            <img
-              src="images/hero-dan.jpg"
-              alt="Dan Žalud – osobní a online fitness trenér"
-              class="hero-dan-photo"
-              fetchpriority="high"
-            >
-            <div class="hero-photo-gradient" aria-hidden="true"></div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <!-- B. SEKCE: POZNEJ SVÉHO TRENÉRA -->
+    <!-- B. SEKCE: POZNEJ SVÉHO TRENÉRA (Text a soutěžní fotka vedle sebe) -->
     <section class="trainer-section" id="trener">
-      <div class="container trainer-container">
-        <div class="section-header-center">
-          <span class="section-tag">OSOBNÍ PŘÍSTUP &amp; PRAXE</span>
-          <h2 class="section-title">POZNEJ SVÉHO <span class="text-yellow">TRENÉRA</span></h2>
+      <div class="container trainer-layout">
+        <div class="trainer-content-col">
+          <div class="trainer-header">
+            <span class="section-tag">OSOBNÍ PŘÍSTUP &amp; PRAXE</span>
+            <h2 class="section-title">POZNEJ SVÉHO <span class="text-yellow">TRENÉRA</span></h2>
+          </div>
+
+          <div class="trainer-text-block">
+            <p>
+              Jmenuji se Dan Žalud a fitness se věnuji již více než 9 let, z toho 9 let aktivně závodím v kulturistice. Více než 2 roky pomáhám klientům dosahovat jejich cílů – od zdravého životního stylu a odstranění pohybových obtíží až po závodní přípravu. Za sebou mám již více než 30 klientů.
+            </p>
+            <p>
+              Zakládám si na individuálním přístupu, znalostech a otevřené komunikaci. Nemusíš se bát na mě obrátit. Společně najdeme cestu, která bude fungovat právě pro tebe.
+            </p>
+            <p class="trainer-motto">
+              Tvůj cíl. Můj plán. Společný výsledek.
+            </p>
+          </div>
         </div>
 
-        <div class="trainer-text-block">
-          <p>
-            Jmenuji se Dan Žalud a fitness se věnuji již více než 9 let, z toho 9 let aktivně závodím v kulturistice. Více než 2 roky pomáhám klientům dosahovat jejich cílů – od zdravého životního stylu a odstranění pohybových obtíží až po závodní přípravu. Za sebou mám již více než 30 klientů.
-          </p>
-          <p>
-            Zakládám si na individuálním přístupu, znalostech a otevřené komunikaci. Nemusíš se bát na mě obrátit. Společně najdeme cestu, která bude fungovat právě pro tebe.
-          </p>
-          <p class="trainer-motto">
-            Tvůj cíl. Můj plán. Společný výsledek.
-          </p>
-        </div>
-
-        <div class="trainer-photo-wrap">
-          <img
-            src="images/soutez-dan.jpg"
-            alt="Dan Žalud na soutěži NPC Olympia Qualifier s trofejí a medailí"
-            class="trainer-stage-photo"
-            loading="lazy"
-          >
+        <div class="trainer-photo-col">
+          <div class="trainer-photo-wrap">
+            <img
+              src="images/soutez-dan.jpg"
+              alt="Dan Žalud na soutěži NPC Olympia Qualifier s trofejí a medailí"
+              class="trainer-stage-photo"
+              loading="lazy"
+            >
+          </div>
         </div>
       </div>
     </section>
