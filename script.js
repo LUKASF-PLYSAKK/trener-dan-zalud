@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(raf);
   }
 
-  // --- 8. React Bits Vanilla Adaptations (DavidHDev/react-bits: CountUp & SpotlightCard) ---
+  // --- 8. React Bits Vanilla Adaptations (DavidHDev/react-bits: CountUp) ---
   if (!prefersReducedMotion) {
     document.querySelectorAll('[data-countup]').forEach(el => {
       const target = parseInt(el.getAttribute('data-countup') || '0', 10);
@@ -441,18 +441,6 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(step);
     });
   }
-
-  const spotlightTargets = document.querySelectorAll(
-    '.pillar-card, .pricing-card, .package-card, .process-step, .coop-card, .hero-stat-item'
-  );
-  spotlightTargets.forEach(card => {
-    card.classList.add('rb-spotlight');
-    card.addEventListener('pointermove', (e) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-      card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-    });
-  });
 
   // Security helper to escape HTML in confirmation text
   function escapeHtml(str) {

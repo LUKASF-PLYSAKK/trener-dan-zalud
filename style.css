@@ -1806,7 +1806,7 @@ dialog.legal-dialog::backdrop {
 }
 
 /* ==========================================================================
-   REACT BITS VANILLA ADAPTATIONS (DavidHDev/react-bits: ShinyText & SpotlightCard)
+   REACT BITS VANILLA ADAPTATIONS (DavidHDev/react-bits: ShinyText)
    ========================================================================== */
 
 .rb-shiny-text {
@@ -1836,36 +1836,5 @@ dialog.legal-dialog::backdrop {
     100% {
       background-position: -200% center;
     }
-  }
-}
-
-.rb-spotlight {
-  position: relative;
-}
-
-.rb-spotlight::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: radial-gradient(
-    420px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
-    rgba(229, 169, 60, 0.14),
-    transparent 55%
-  );
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  z-index: 1;
-}
-
-:where(.rb-spotlight > :not(.featured-ribbon)) {
-  position: relative;
-  z-index: 2;
-}
-
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .rb-spotlight:hover::before {
-    opacity: 1;
   }
 }
