@@ -443,7 +443,7 @@ body {
   object-fit: cover;
   object-position: 78% 70%;
   display: block;
-  filter: brightness(0.8) contrast(1.04);
+  filter: grayscale(100%) contrast(1.24) brightness(0.76);
 }
 
 .hero-photo-gradient {
@@ -461,7 +461,7 @@ body {
 }
 
 .hero-text-col {
-  max-width: 620px;
+  max-width: 560px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1023,10 +1023,18 @@ body {
 
 .coop-media {
   width: 100%;
-  aspect-ratio: 6 / 5;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #101115;
   position: relative;
+}
+
+.coop-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(13, 13, 16, 0.08) 0%, transparent 45%, rgba(13, 13, 16, 0.42) 100%);
 }
 
 .coop-img {
@@ -1039,20 +1047,21 @@ body {
 
 /* 1. Online coaching: barevná fotka s viditelným notebookem i obličejem */
 .coop-img-online {
-  object-position: center 49%;
+  object-position: center 50%;
 }
 
 .coop-card:hover .coop-img-online {
   transform: scale(1.04);
 }
 
-/* 2. Osobní coaching: stahování kladky bez přehnaného přiblížení a bez černých okrajů */
+/* 2. Osobní coaching: celá akční fotka při cvičení v tmavém stylu bez ořezu hlavy a těla */
 .coop-img-pulldown {
-  object-position: center 39%;
+  object-position: center 62%;
+  filter: contrast(1.06) brightness(0.92);
 }
 
 .coop-card:hover .coop-img-pulldown {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 /* 3. Kompletní spolupráce */
@@ -1703,35 +1712,52 @@ dialog.legal-dialog::backdrop {
 }
 
 @media (max-width: 900px) {
-  /* Mobile & narrow tablet: Hero photo edge-to-edge full width at top, smoothly fading into text */
+  /* Mobile & narrow tablet: Styl rawstance.cz – full-bleed monochrome background with centered headline & CTAs directly over the photo */
   .hero-section {
-    padding: 0 0 56px 0;
+    padding: 64px 0 56px 0;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
   }
 
   .hero-bg-media {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
+    position: absolute;
+    inset: 0;
+    left: 0;
     transform: none;
     width: 100%;
-    height: 460px;
+    height: 100%;
   }
 
   .hero-dan-photo {
-    object-position: center 16%;
+    object-position: center 20%;
+    filter: grayscale(100%) contrast(1.22) brightness(0.68);
   }
 
   .hero-photo-gradient {
-    background: linear-gradient(180deg, rgba(13, 13, 16, 0.24) 0%, rgba(13, 13, 16, 0.16) 40%, rgba(13, 13, 16, 0.74) 78%, #0d0d10 100%);
+    background:
+      radial-gradient(circle at center, rgba(13, 13, 16, 0.52) 0%, rgba(13, 13, 16, 0.8) 100%),
+      linear-gradient(180deg, rgba(13, 13, 16, 0.56) 0%, rgba(13, 13, 16, 0.44) 45%, #0d0d10 100%);
   }
 
   .hero-container {
-    margin-top: -52px;
+    margin-top: 0;
+    width: 100%;
   }
 
   .hero-text-col {
     max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
   }
 
   .trainer-layout {
