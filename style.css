@@ -1727,20 +1727,20 @@ dialog.legal-dialog::backdrop {
     left: auto;
     transform: none;
     width: 100%;
-    height: 470px;
+    height: 340px;
   }
 
   .hero-dan-photo {
-    object-position: center 18%;
+    object-position: center 26%;
     filter: grayscale(100%) contrast(1.16) brightness(0.95);
   }
 
   .hero-photo-gradient {
-    background: linear-gradient(180deg, transparent 0%, transparent 62%, rgba(13, 13, 16, 0.72) 86%, #0d0d10 100%);
+    background: linear-gradient(180deg, transparent 0%, transparent 48%, rgba(13, 13, 16, 0.82) 78%, #0d0d10 100%);
   }
 
   .hero-container {
-    margin-top: -28px;
+    margin-top: -42px;
     width: 100%;
   }
 
