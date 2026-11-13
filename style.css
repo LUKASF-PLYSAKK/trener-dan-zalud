@@ -1804,3 +1804,68 @@ dialog.legal-dialog::backdrop {
     padding-bottom: 72px;
   }
 }
+
+/* ==========================================================================
+   REACT BITS VANILLA ADAPTATIONS (DavidHDev/react-bits: ShinyText & SpotlightCard)
+   ========================================================================== */
+
+.rb-shiny-text {
+  display: inline-block;
+  color: var(--accent-yellow);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rb-shiny-text {
+    background: linear-gradient(
+      115deg,
+      #e5a93c 30%,
+      #fffbeb 50%,
+      #e5a93c 70%
+    );
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rb-shine 4.8s linear infinite;
+  }
+
+  @keyframes rb-shine {
+    0% {
+      background-position: 200% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
+}
+
+.rb-spotlight {
+  position: relative;
+}
+
+.rb-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    420px circle at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    rgba(229, 169, 60, 0.14),
+    transparent 55%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+:where(.rb-spotlight > :not(.featured-ribbon)) {
+  position: relative;
+  z-index: 2;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .rb-spotlight:hover::before {
+    opacity: 1;
+  }
+}
